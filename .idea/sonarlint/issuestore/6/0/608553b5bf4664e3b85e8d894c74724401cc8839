@@ -1,12 +1,4 @@
 
-“	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÏÜ™8êÅÂø1J$ed02b47b-e6f8-4e98-b39d-45e7a9413430
-m	java:S106&"+Replace this use of System.out by a logger.(¶Ş§Ğ8ŸÆÂø1J$2bf72486-5ace-43cf-806d-fd36c6a979ce
-m	java:S106+"+Replace this use of System.out by a logger.(ğ€Óá8¢ÆÂø1J$687dac67-978d-42a2-b424-40ecc7880f6e
-„
-java:S11262"AReplace this if-then-else statement by a single return statement.(±Ñ°„8¦ÆÂø1J$727196e8-affe-4c01-b8b2-9b56bcb17758
-‰
-java:S11268"AReplace this if-then-else statement by a single return statement.(İÛƒ—øÿÿÿÿ8¨ÆÂø1J$b4b5a1ba-d265-4400-bf6d-9d7e51132851
-w
-java:S2864="4Iterate over the "entrySet" instead of the "keySet".(–ÏÅ—8«ÆÂø1J$2bf4b41f-dce0-4b6b-a73a-7145ecc04380
-r	java:S106>"+Replace this use of System.out by a logger.(ˆ’Æùÿÿÿÿ8¬ÆÂø1J$2467ae19-2ba0-446c-b834-344806427186
-l	java:S106@"+Replace this use of System.out by a logger.(›äŒ>8­ÆÂø1J$fbcef054-7d54-4553-93ed-793a91dfe722
+“	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÏÜ™8ÇóËÃø1J$4618717c-0b5d-4780-a405-12bfb13f0515
+m	java:S106!"+Replace this use of System.out by a logger.(¶Ş§Ğ8×óËÃø1J$07741724-963d-4c28-87d7-d9d80276bb1a
+m	java:S106&"+Replace this use of System.out by a logger.(ğ€Óá8ØóËÃø1J$d7077273-25af-4d5d-b6c3-1bc2b53f8b09

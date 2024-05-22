@@ -11,23 +11,18 @@ public class DinnerConstructor {
     ArrayList<String> dishes;
 
     DinnerConstructor() {
-
         menu = new HashMap<>();
-        random=new Random();
+        random = new Random();
         // Это для теста
-        dishes=new ArrayList<>(List.of("Борщ", "Суп гречневый", "Куриный бульон","Суп с фрикадельками","Окрошка"));
+        dishes = new ArrayList<>(List.of("Борщ", "Суп гречневый", "Куриный бульон", "Суп с фрикадельками", "Окрошка"));
         menu.put("Первое", dishes);
-
-        dishes=new ArrayList<>(List.of("Плов", "Мясо по-капитански", "Пельмени","Ленивые голубцы","Макароны по-флотски"));
+        dishes = new ArrayList<>(List.of("Плов", "Мясо по-капитански", "Пельмени", "Ленивые голубцы", "Макароны по-флотски"));
         menu.put("Второе", dishes);
-
-        dishes=new ArrayList<>(List.of("Гречка", "Рис", "Макароны","Жареный картофель","Тушеная капуста"));
+        dishes = new ArrayList<>(List.of("Гречка", "Рис", "Макароны", "Жареный картофель", "Тушеная капуста"));
         menu.put("Гарнир", dishes);
-
-        dishes=new ArrayList<>(List.of("Оливье", "Винегрет", "Крабовый салат","Овощной салат","Летний салат"));
+        dishes = new ArrayList<>(List.of("Оливье", "Винегрет", "Крабовый салат", "Овощной салат", "Летний салат"));
         menu.put("Салат", dishes);
-
-        dishes=new ArrayList<>(List.of("Морс клюквенный", "Чай", "Минеральная вода","Квас","Молочный коктель"));
+        dishes = new ArrayList<>(List.of("Морс клюквенный", "Чай", "Минеральная вода", "Квас", "Молочный коктель"));
         menu.put("Напиток", dishes);
     }
 
@@ -43,32 +38,20 @@ public class DinnerConstructor {
         else System.out.println("Блюдо уже в списке.");
     }
 
-    public String getDish(String type, int number){ // Возвращает блюдо типа - type с индексом number в списке
-        return menu.get(type).get(number); }
+    public String getDish(String type, int number) { // Возвращает блюдо типа - type с индексом number в списке
+        return menu.get(type).get(number);
+    }
 
     boolean checkType(String type) { //Метод должен проверять существует ли такой тип блюд?
-        if (menu.containsKey(type)) return true;
-        else return false;
+        return menu.containsKey(type);
     }
 
     boolean chekDish(String type, String dish) { //Метод должен проверять присутствие блюда в списке
         // Название блюд разных типов могут совпадать
-        if (menu.get(type).contains(dish)) return true;
-        else return false;
+        return menu.get(type).contains(dish);
     }
 
-    public void printAllMenu() { //Метод печатает таблицу тип блюда - названия блюд. Написан для тестированияю
-        for (String type : menu.keySet()) {
-            System.out.println("\t"+type);
-            for (String dish : menu.get(type)) {
-                System.out.print(dish+"\t ");
-            }
-        }
-    }
-
-    int randomNumber(String type){ //Рандомайзер
-        //double r=Math.random(); //случайное число от 0 до 1 в формате double
-        //return (int) (r*menu.get(type).size()); //случайное число * длину списка и сразу приводим к целому числу
-        return random.nextInt(menu.get(type).size()); //Так тоже интересно
+    int randomNumber(String type) { //Рандомайзер
+        return random.nextInt(menu.get(type).size());
     }
 }

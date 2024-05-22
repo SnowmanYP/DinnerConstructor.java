@@ -8,7 +8,6 @@ public class Main {
 
     static DinnerConstructor dc;
     static Scanner scanner;
-
     public static void main(String[] args) {
         dc = new DinnerConstructor();
         scanner = new Scanner(System.in);
@@ -47,10 +46,9 @@ public class Main {
     private static void generateDishCombo() {
         System.out.println("Начинаем конструировать обед...");
         System.out.println("Введите количество наборов, которые нужно сгенерировать:");
-        int numberOfCombos;// = scanner.nextInt(); //Обработка ошибок
-        // Exception in thread "main" java.util.InputMismatchException
+        int numberOfCombos;
         while (true) {  //Этот блок обрабатывает ошибки, если пользователь ввел не число.
-            // Нет возможности вынестив в отдельный метод т.к. запрещено передавать объект Scanner.
+            // Нет возможности вынести в отдельный метод т.к. запрещено передавать объект Scanner.
             try {
                 numberOfCombos = scanner.nextInt();
                 break;
@@ -65,7 +63,7 @@ public class Main {
         }
         scanner.nextLine();
         System.out.println("Вводите типы блюда, разделяя символом переноса строки (enter). Для завершения ввода введите пустую строку");
-        String nextItem = " "; //scanner.nextLine(); - если оставить - значения первых блюд теряются
+        String nextItem = " ";
         //реализуйте ввод типов блюд
         ArrayList<String>[] group = new ArrayList[numberOfCombos]; // Создаем массив списков.
         for (int i = 0; i < numberOfCombos; i++) { //и сразу создаем объекты, это позволит обращаться к методам...
@@ -87,7 +85,7 @@ public class Main {
             // сгенерируйте комбинации блюд и выведите на экран
         }
         for (int i = 0; i < group.length; i++) {
-            System.out.println("Комбо "+(i+1));
+            System.out.println("Комбо " + (i + 1));
             System.out.println(group[i]);
         }
     }
